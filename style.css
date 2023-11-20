@@ -74,12 +74,14 @@ label {
     cursor: pointer;
 }
 
-input[type="radio"]:checked + label {
-    background-color: #000000;
-    color: #FFFFFF;
-    border-color: #000000;
+/* Styling for the label when hovered */
+label:hover {
+    background-color: #9B87FE; /* Purple */
 }
 
-label:hover {
-    background-color: #9B87FE;
+/* Styling for the label when radio input is checked */
+input[type="radio"]:checked + label {
+    background-color: #000000; /* Black */
+    color: #FFFFFF;
+    border-color: #000000;
 }
