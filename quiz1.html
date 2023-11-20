@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial scale=1.0">
+<title>Pollock Quiz </title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <section class="sub2-header">
+     
+       
+        <div class="text-box1">
+            <h1>Pollock's Pieces</h1>
+            <p> This is a ART Quiz
+               
+            </p>
+        </div>
+           
+       
+    </section>
+   
+    <script>
+        function scoreQuiz()
+        {
+        var correct=0;
+        if(document.quiz.answer1[2].checked == true)
+        {correct = correct + 1;
+        }
+        if(document.quiz.answer2[2].checked == true)
+        {correct = correct + 1;
+        }
+        if(document.quiz.answer3[0].checked == true)
+        {correct = correct + 1;
+        }
+        if(document.quiz.answer4[2].checked == true)
+        {correct = correct + 1;
+        }
+        if(document.quiz.answer5[1].checked == true)
+        {correct = correct + 1;
+        }
+        if(document.quiz.answer6[1].checked == true)
+        {correct = correct + 1;
+        }
+        var name= document.quiz.name.value;
+        document.quiz.score.value = name + " have" + correct + " correct answers.";
+        }
+       
+    </script>
+
+<section class="quiz1">
+    <h1> Lets Go... </h1>
+    <form name="quiz">
+    <div class="grid-container">
+    <div class="item1"><strong>Name:</strong>
+    <input name="emailadress" type="text" id="name" size="30" maxlength="40"></div>
+
+
+
+
+    <div>Question1?<br>
+    <input type="radio" id="q1-op1" name="answer1" value="answer1-op1">
+    <label for="q1-op1">131</label><br>
+    <input type="radio" id="q1-op2" name="answer1" value="answer1-op2">
+    <label for="q1-op2">700</label><br>
+    <input type="radio" id="q1-op3" name="answer1" value="answer1-op3">
+    <label for="q1-op3">320</label><br>
+    <input type="radio" id="q1-op4" name="answer1" value="answer1-op4">
+    <label for="q1-op4">300</label><br>
+
+    </div>
+
+    <div>Question2?<br>
+    <input type="radio" id="q1-op1" name="answer2" value="answer1-op1">
+    <label for="q1-op1"></label><br>
+    <input type="radio" id="q1-op2" name="answer2" value="answer1-op2">
+    <label for="q1-op2"></label><br>
+    <input type="radio" id="q1-op3" name="answer2" value="answer1-op3">
+    <label for="q1-op3"></label><br>
+    <input type="radio" id="q1-op4" name="answer2" value="answer1-op4">
+    <label for="q1-op4"></label><br>
+    </div>
+
+    <div>Question3?<br>
+    <input type="radio" id="q1-op1" name="answer3" value="answer1-op1">
+    <label for="q1-op1"></label><br>
+    <input type="radio" id="q1-op2" name="answer3" value="answer1-op2">
+    <label for="q1-op2"></label><br>
+    <input type="radio" id="q1-op3" name="answer3" value="answer1-op3">
+    <label for="q1-op3"></label><br>
+    <input type="radio" id="q1-op4" name="answer3" value="answer1-op4">
+    <label for="q1-op4"></label><br>
+    </div>
+
+    <div>Question4?<br>
+    <input type="radio" id="q1-op1" name="answer4" value="answer1-op1">
+    <label for="q1-op1"></label><br>
+    <input type="radio" id="q1-op2" name="answer4" value="answer1-op2">
+    <label for="q1-op2"></label><br>
+    <input type="radio" id="q1-op3" name="answer4" value="answer1-op3">
+    <label for="q1-op3"></label><br>
+    <input type="radio" id="q1-op4" name="answer4" value="answer1-op4">
+    <label for="q1-op4"></label><br>
+    </div>
+
+    <div>Question5?<br>
+    <input type="radio" id="q1-op1" name="answer5" value="answer1-op1">
+    <label for="q1-op1"></label><br>
+    <input type="radio" id="q1-op2" name="answer5" value="answer1-op2">
+    <label for="q1-op2"></label><br>
+    <input type="radio" id="q1-op3" name="answer5" value="answer1-op3">
+    <label for="q1-op3"></label><br>
+    <input type="radio" id="q1-op4" name="answer5" value="answer1-op4">
+    <label for="q1-op4"></label><br>
+    </div>
+
+    <div>Question6?<br>
+    <input type="radio" id="q1-op1" name="answer6" value="answer1-op1">
+    <label for="q1-op1"></label><br>
+    <input type="radio" id="q1-op2" name="answer6" value="answer1-op2">
+    <label for="q1-op2"></label><br>
+    <input type="radio" id="q1-op3" name="answer6" value="answer1-op3">
+    <label for="q1-op3"></label><br>
+    <input type="radio" id="q1-op4" name="answer6" value="answer1-op4">
+    <label for="q1-op4"></label><br>
+    </div>
+
+    <div class="item1"><p><a href="#" onClick="scoreQuiz(); return false;">Show my score:
+    <input name="score" type="text" size="30" maxlength="40" readonly="yes">
+    </a>
+</section>
+       
+
+   
+
+   
+<section class="footer">
+    <h4> About us</h4>
+    <p> Thanks for taking part</p>
+   
+    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+    <i class="fa fa-linkedin" aria-hidden="true"></i>
+    <i class="fa fa-instagram" aria-hidden="true"></i>
+    <i class="fa fa-snapchat-square" aria-hidden="true"></i>
+    <i class="fa fa-twitter" aria-hidden="true"></i>
+   
+    <p>
+        THIS IS A DEMO SITE!
+    </p>
+
+</section>
