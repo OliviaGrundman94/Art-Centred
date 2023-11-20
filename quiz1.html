@@ -1,153 +1,174 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta name="viewport" content="width=device-width,initial scale=1.0">
-<title>Pollock Quiz </title>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+    <head>
+        <meta name="viewport" content="width=device-width,initial scale=1.0">
+        <title>Pollock Quiz </title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="myscripts.js"></script>
+    </head>
 
-<body>
+    <body>
+        <div class="container">
 
-    <section class="sub2-header">
-     
-       
-        <div class="text-box1">
-            <h1>Pollock's Pieces</h1>
-            <p> This is a ART Quiz
-               
-            </p>
+            <section class="sub2-header">     
+                <div class="text-box1">
+                    <h1>Pollock's Pieces</h1>
+                    <p>Answer the questions as best you can!</p>
+                </div>
+            </section>
+        
+            <script>
+                function scoreQuiz()
+                {
+                var correct=0;
+                if(document.quiz.answer1[2].checked == true)
+                {correct = correct + 1;
+                }
+                if(document.quiz.answer2[2].checked == true)
+                {correct = correct + 1;
+                }
+                if(document.quiz.answer3[0].checked == true)
+                {correct = correct + 1;
+                }
+                if(document.quiz.answer4[2].checked == true)
+                {correct = correct + 1;
+                }
+                if(document.quiz.answer5[1].checked == true)
+                {correct = correct + 1;
+                }
+                if(document.quiz.answer6[1].checked == true)
+                {correct = correct + 1;
+                }
+                var name= document.quiz.name.value;
+                document.quiz.score.value = name + " have" + correct + " correct answers.";
+                }
+            
+            </script>
+
+            <section class="quiz1">
+                <h2> Are you ready ... </h2>
+
+                <form name="quiz">
+                    <div class="grid-container">
+                    <!-- <div class="item1"><strong>Name:</strong> -->
+                    <!-- <input name="emailadress" type="text" id="name" size="30" maxlength="40"></div> -->
+
+                    <div class="question">
+                        <h2>Where was Jackson Pollock born?</h2>
+                            <input type="radio" id="q1-op1" name="answer1" value="answer1-op1"> <label for="q1-op1">
+                                <p>New York, America</p>
+                            </label>
+                            <input type="radio" id="q1-op2" name="answer1" value="answer1-op2"> <label for="q1-op2">
+                                <p>Wyoming, America</p>
+                            </label>
+                            <input type="radio" id="q1-op3" name="answer1" value="answer1-op3"> <label for="q1-op3">
+                                <p>San Diego, America</p>
+                            </label>
+                            <input type="radio" id="q1-op4" name="answer1" value="answer1-op4"> <label for="q1-op4">
+                                <p>London, United Kingdom</p>
+                            </label>
+                    </div>
+
+                    <div class="question">
+                        <h2>Question2?</h2>
+                        <input type="radio" id="q1-op1" name="answer2" value="answer1-op1">
+                        <label for="q1-op1"></label><br>
+                        <input type="radio" id="q1-op2" name="answer2" value="answer1-op2">
+                        <label for="q1-op2"></label><br>
+                        <input type="radio" id="q1-op3" name="answer2" value="answer1-op3">
+                        <label for="q1-op3"></label><br>
+                        <input type="radio" id="q1-op4" name="answer2" value="answer1-op4">
+                        <label for="q1-op4"></label><br>
+                    </div>
+
+                    <div>Question3?<br>
+                        <input type="radio" id="q1-op1" name="answer3" value="answer1-op1">
+                        <label for="q1-op1"></label><br>
+                        <input type="radio" id="q1-op2" name="answer3" value="answer1-op2">
+                        <label for="q1-op2"></label><br>
+                        <input type="radio" id="q1-op3" name="answer3" value="answer1-op3">
+                        <label for="q1-op3"></label><br>
+                        <input type="radio" id="q1-op4" name="answer3" value="answer1-op4">
+                        <label for="q1-op4"></label><br>
+                    </div>
+
+                    <div>Question4?<br>
+                        <input type="radio" id="q1-op1" name="answer4" value="answer1-op1">
+                        <label for="q1-op1"></label><br>
+                        <input type="radio" id="q1-op2" name="answer4" value="answer1-op2">
+                        <label for="q1-op2"></label><br>
+                        <input type="radio" id="q1-op3" name="answer4" value="answer1-op3">
+                        <label for="q1-op3"></label><br>
+                        <input type="radio" id="q1-op4" name="answer4" value="answer1-op4">
+                        <label for="q1-op4"></label><br>
+                    </div>
+
+                    <div>Question5?<br>
+                        <input type="radio" id="q1-op1" name="answer5" value="answer1-op1">
+                        <label for="q1-op1"></label><br>
+                        <input type="radio" id="q1-op2" name="answer5" value="answer1-op2">
+                        <label for="q1-op2"></label><br>
+                        <input type="radio" id="q1-op3" name="answer5" value="answer1-op3">
+                        <label for="q1-op3"></label><br>
+                        <input type="radio" id="q1-op4" name="answer5" value="answer1-op4">
+                        <label for="q1-op4"></label><br>
+                    </div>
+
+                    <div>Question6?<br>
+                        <input type="radio" id="q1-op1" name="answer6" value="answer1-op1">
+                        <label for="q1-op1"></label><br>
+                        <input type="radio" id="q1-op2" name="answer6" value="answer1-op2">
+                        <label for="q1-op2"></label><br>
+                        <input type="radio" id="q1-op3" name="answer6" value="answer1-op3">
+                        <label for="q1-op3"></label><br>
+                        <input type="radio" id="q1-op4" name="answer6" value="answer1-op4">
+                        <label for="q1-op4"></label><br>
+                    </div>
+
+                    <div class="item1">
+                        <p><a href="#" onClick="scoreQuiz(); return false;"><p>Show my score: <input name="score" type="text" size="30" maxlength="40" readonly="yes">
+                        </a></p>
+                    </div>
+                </form>    
+            </section>
+            
+            <section class="footer">
+                <h4> About us</h4>
+                <p> Thanks for taking part</p>
+            
+                <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+                <i class="fa fa-snapchat-square" aria-hidden="true"></i>
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+            </section>
         </div>
-           
-       
-    </section>
-   
-    <script>
-        function scoreQuiz()
-        {
-        var correct=0;
-        if(document.quiz.answer1[2].checked == true)
-        {correct = correct + 1;
-        }
-        if(document.quiz.answer2[2].checked == true)
-        {correct = correct + 1;
-        }
-        if(document.quiz.answer3[0].checked == true)
-        {correct = correct + 1;
-        }
-        if(document.quiz.answer4[2].checked == true)
-        {correct = correct + 1;
-        }
-        if(document.quiz.answer5[1].checked == true)
-        {correct = correct + 1;
-        }
-        if(document.quiz.answer6[1].checked == true)
-        {correct = correct + 1;
-        }
-        var name= document.quiz.name.value;
-        document.quiz.score.value = name + " have" + correct + " correct answers.";
-        }
-       
-    </script>
+        <script>
+            // Set the date we're counting down to
+            var countDownDate = new Date().getTime() + 10000; // 10 seconds for the first question
 
-<section class="quiz1">
-    <h1> Lets Go... </h1>
-    <form name="quiz">
-    <div class="grid-container">
-    <div class="item1"><strong>Name:</strong>
-    <input name="emailadress" type="text" id="name" size="30" maxlength="40"></div>
+            // Update the count down every 1 second
+            var x = setInterval(function() {
+                // Get today's date and time
+                var now = new Date().getTime();
 
+                // Find the distance between now and the count down date
+                var distance = countDownDate - now;
 
+                // Time calculations for seconds
+                var seconds = Math.floor(distance / 1000);
 
+                // Display the result in the element with id="demo"
+                document.getElementById("demo").innerHTML = "Time remaining: " + seconds + "s ";
 
-    <div>Question1?<br>
-    <input type="radio" id="q1-op1" name="answer1" value="answer1-op1">
-    <label for="q1-op1">131</label><br>
-    <input type="radio" id="q1-op2" name="answer1" value="answer1-op2">
-    <label for="q1-op2">700</label><br>
-    <input type="radio" id="q1-op3" name="answer1" value="answer1-op3">
-    <label for="q1-op3">320</label><br>
-    <input type="radio" id="q1-op4" name="answer1" value="answer1-op4">
-    <label for="q1-op4">300</label><br>
-
-    </div>
-
-    <div>Question2?<br>
-    <input type="radio" id="q1-op1" name="answer2" value="answer1-op1">
-    <label for="q1-op1"></label><br>
-    <input type="radio" id="q1-op2" name="answer2" value="answer1-op2">
-    <label for="q1-op2"></label><br>
-    <input type="radio" id="q1-op3" name="answer2" value="answer1-op3">
-    <label for="q1-op3"></label><br>
-    <input type="radio" id="q1-op4" name="answer2" value="answer1-op4">
-    <label for="q1-op4"></label><br>
-    </div>
-
-    <div>Question3?<br>
-    <input type="radio" id="q1-op1" name="answer3" value="answer1-op1">
-    <label for="q1-op1"></label><br>
-    <input type="radio" id="q1-op2" name="answer3" value="answer1-op2">
-    <label for="q1-op2"></label><br>
-    <input type="radio" id="q1-op3" name="answer3" value="answer1-op3">
-    <label for="q1-op3"></label><br>
-    <input type="radio" id="q1-op4" name="answer3" value="answer1-op4">
-    <label for="q1-op4"></label><br>
-    </div>
-
-    <div>Question4?<br>
-    <input type="radio" id="q1-op1" name="answer4" value="answer1-op1">
-    <label for="q1-op1"></label><br>
-    <input type="radio" id="q1-op2" name="answer4" value="answer1-op2">
-    <label for="q1-op2"></label><br>
-    <input type="radio" id="q1-op3" name="answer4" value="answer1-op3">
-    <label for="q1-op3"></label><br>
-    <input type="radio" id="q1-op4" name="answer4" value="answer1-op4">
-    <label for="q1-op4"></label><br>
-    </div>
-
-    <div>Question5?<br>
-    <input type="radio" id="q1-op1" name="answer5" value="answer1-op1">
-    <label for="q1-op1"></label><br>
-    <input type="radio" id="q1-op2" name="answer5" value="answer1-op2">
-    <label for="q1-op2"></label><br>
-    <input type="radio" id="q1-op3" name="answer5" value="answer1-op3">
-    <label for="q1-op3"></label><br>
-    <input type="radio" id="q1-op4" name="answer5" value="answer1-op4">
-    <label for="q1-op4"></label><br>
-    </div>
-
-    <div>Question6?<br>
-    <input type="radio" id="q1-op1" name="answer6" value="answer1-op1">
-    <label for="q1-op1"></label><br>
-    <input type="radio" id="q1-op2" name="answer6" value="answer1-op2">
-    <label for="q1-op2"></label><br>
-    <input type="radio" id="q1-op3" name="answer6" value="answer1-op3">
-    <label for="q1-op3"></label><br>
-    <input type="radio" id="q1-op4" name="answer6" value="answer1-op4">
-    <label for="q1-op4"></label><br>
-    </div>
-
-    <div class="item1"><p><a href="#" onClick="scoreQuiz(); return false;">Show my score:
-    <input name="score" type="text" size="30" maxlength="40" readonly="yes">
-    </a>
-</section>
-       
-
-   
-
-   
-<section class="footer">
-    <h4> About us</h4>
-    <p> Thanks for taking part</p>
-   
-    <i class="fa fa-facebook-official" aria-hidden="true"></i>
-    <i class="fa fa-linkedin" aria-hidden="true"></i>
-    <i class="fa fa-instagram" aria-hidden="true"></i>
-    <i class="fa fa-snapchat-square" aria-hidden="true"></i>
-    <i class="fa fa-twitter" aria-hidden="true"></i>
-   
-    <p>
-        THIS IS A DEMO SITE!
-    </p>
-
-</section>
+                // If the count down is finished, move to the next question or handle as needed
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("demo").innerHTML = "Time's up!";
+                    // Add logic to move to the next question or perform any other action
+                }
+            }, 1000);
+        </script>
+    </body>
+</html>
