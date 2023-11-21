@@ -5,170 +5,190 @@
         <title>Pollock Quiz </title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="myscripts.js"></script>
+        <script src="scripts.js"></script>
     </head>
 
     <body>
+        <header>
+            <div id="navbar-container">
+                <!-- This is where your navbar will be injected -->
+                <!-- Use JavaScript to load the external HTML file -->
+            </div>
+        </header>
         <div class="container">
 
             <section class="sub2-header">     
                 <div class="text-box1">
-                    <h1>Pollock's Pieces</h1>
+                    <h1>Pollock's Art Quiz</h1>
                     <p>Answer the questions as best you can!</p>
                 </div>
             </section>
         
-            <script>
-                function scoreQuiz()
-                {
-                var correct=0;
-                if(document.quiz.answer1[2].checked == true)
-                {correct = correct + 1;
-                }
-                if(document.quiz.answer2[2].checked == true)
-                {correct = correct + 1;
-                }
-                if(document.quiz.answer3[0].checked == true)
-                {correct = correct + 1;
-                }
-                if(document.quiz.answer4[2].checked == true)
-                {correct = correct + 1;
-                }
-                if(document.quiz.answer5[1].checked == true)
-                {correct = correct + 1;
-                }
-                if(document.quiz.answer6[1].checked == true)
-                {correct = correct + 1;
-                }
-                var name= document.quiz.name.value;
-                document.quiz.score.value = name + " have" + correct + " correct answers.";
-                }
-            
-            </script>
 
-            <section class="quiz1">
-                <h2> Are you ready ... </h2>
-
+            <section class="quiz-1">
+                <div class="lrg-text">
+                    <h2> Are you ready ... </h2>   
+                </div>
                 <form name="quiz">
                     <div class="grid-container">
-                    <!-- <div class="item1"><strong>Name:</strong> -->
-                    <!-- <input name="emailadress" type="text" id="name" size="30" maxlength="40"></div> -->
+                        <div class="item1"><strong>Name:</strong>
+                            <input name="name" type="text" id="name" size="30" maxlength="40">
 
-                    <div class="question">
-                        <h2>Where was Jackson Pollock born?</h2>
-                            <input type="radio" id="q1-op1" name="answer1" value="answer1-op1"> <label for="q1-op1">
-                                <p>New York, America</p>
-                            </label>
-                            <input type="radio" id="q1-op2" name="answer1" value="answer1-op2"> <label for="q1-op2">
-                                <p>Wyoming, America</p>
-                            </label>
-                            <input type="radio" id="q1-op3" name="answer1" value="answer1-op3"> <label for="q1-op3">
-                                <p>San Diego, America</p>
-                            </label>
-                            <input type="radio" id="q1-op4" name="answer1" value="answer1-op4"> <label for="q1-op4">
-                                <p>London, United Kingdom</p>
-                            </label>
-                    </div>
+                            <div class="question">
+                                <h2>Where was Jackson Pollock born?</h2>
+                            </div>
+                            <div class="answer">     
+                                <input type="radio" id="q1-op1" name="answer1" value="answer1-op1"> <label for="q1-op1">
+                                    <p>New York, America</p>
+                                </label>
+                                <input type="radio" id="q1-op2" name="answer1" value="answer1-op2"> <label for="q1-op2">
+                                    <p>San Diego, America</p>
+                                </label>
+                                <!-- correct answer -->
+                                <input type="radio" id="q1-op3" name="answer1" value="answer1-op3"> <label for="q1-op3">
+                                    <p>Wyoming, America</p>
+                                </label>
+                                <input type="radio" id="q1-op4" name="answer1" value="answer1-op4"> <label for="q1-op4">
+                                    <p>London, United Kingdom</p>
+                                </label>
+                            </div>
 
-                    <div class="question">
-                        <h2>Question2?</h2>
-                        <input type="radio" id="q1-op1" name="answer2" value="answer1-op1">
-                        <label for="q1-op1"></label><br>
-                        <input type="radio" id="q1-op2" name="answer2" value="answer1-op2">
-                        <label for="q1-op2"></label><br>
-                        <input type="radio" id="q1-op3" name="answer2" value="answer1-op3">
-                        <label for="q1-op3"></label><br>
-                        <input type="radio" id="q1-op4" name="answer2" value="answer1-op4">
-                        <label for="q1-op4"></label><br>
-                    </div>
+                            <div class="question">
+                                <h2>How old was Jackson Pollock when he moved to New York to become an artist?</h2>
+                            </div>
+                            <div class="answer">       
+                                <input type="radio" id="q2-op1" name="answer2" value="answer2-op1">
+                                <label for="q2-op1">
+                                    <p>16</p>
+                                </label>
+                                <input type="radio" id="q2-op2" name="answer2" value="answer2-op2">
+                                <label for="q2-op2">
+                                    <p>21</p> 
+                                </label>
+                                <!-- correct answer -->
+                                <input type="radio" id="q2-op3" name="answer2" value="answer2-op3">
+                                <label for="q2-op3">
+                                    <p>18</p>
+                                </label>
+                                <input type="radio" id="q2-op4" name="answer2" value="answer2-op4">
+                                <label for="q2-op4">
+                                    <p>30</p>
+                                </label>
+                            </div>
 
-                    <div>Question3?<br>
-                        <input type="radio" id="q1-op1" name="answer3" value="answer1-op1">
-                        <label for="q1-op1"></label><br>
-                        <input type="radio" id="q1-op2" name="answer3" value="answer1-op2">
-                        <label for="q1-op2"></label><br>
-                        <input type="radio" id="q1-op3" name="answer3" value="answer1-op3">
-                        <label for="q1-op3"></label><br>
-                        <input type="radio" id="q1-op4" name="answer3" value="answer1-op4">
-                        <label for="q1-op4"></label><br>
-                    </div>
+                            <div class="question">
+                                <h2>What did Jackson Pollock pour onto the Canvas</h2>
+                            </div>
+                            <div class="answer">       
+                                <!-- correct answer -->
+                                <input type="radio" id="q3-op1" name="answer3" value="answer3-op1">
+                                <label for="q3-op1">
+                                    <p>Paint which reflected his feelings </p>
+                                </label>
+                                <input type="radio" id="q3-op2" name="answer3" value="answer3-op2">
+                                <label for="q3-op2">
+                                    <p>Coffee, because he was tired</p>
+                                </label>
+                                <input type="radio" id="q3-op3" name="answer3" value="answer3-op3">
+                                <label for="q3-op3">
+                                    <p>Water to wet the canvas</p>
+                                </label>
+                                <input type="radio" id="q3-op4" name="answer3" value="answer3-op4">
+                                <label for="q3-op4">
+                                    <p>Ink to create textures</p>
+                                </label>
+                            </div>
 
-                    <div>Question4?<br>
-                        <input type="radio" id="q1-op1" name="answer4" value="answer1-op1">
-                        <label for="q1-op1"></label><br>
-                        <input type="radio" id="q1-op2" name="answer4" value="answer1-op2">
-                        <label for="q1-op2"></label><br>
-                        <input type="radio" id="q1-op3" name="answer4" value="answer1-op3">
-                        <label for="q1-op3"></label><br>
-                        <input type="radio" id="q1-op4" name="answer4" value="answer1-op4">
-                        <label for="q1-op4"></label><br>
-                    </div>
+                            <div class="question">
+                                <h2>What is Jackson Pollocks style of painting called?</h2>
+                            </div>
+                            <div class="answer">   
+                                <input type="radio" id="q4-op1" name="answer4" value="answer4-op1">
+                                <label for="q4-op1">
+                                    <p>Surrealism</p>
+                                </label>
+                                <input type="radio" id="q4-op2" name="answer4" value="answer4-op2">
+                                <label for="q4-op2">
+                                    <p>Messy</p>
+                                </label>
+                                <!-- correct answer -->
+                                <input type="radio" id="q4-op3" name="answer4" value="answer4-op3">
+                                <label for="q4-op3">
+                                    <p>Abstract Expressionism</p>
+                                </label>
+                                <input type="radio" id="q4-op4" name="answer4" value="answer4-op4">
+                                <label for="q4-op4">
+                                    <p>Impressionism</p>
+                                </label>
+                            </div>
 
-                    <div>Question5?<br>
-                        <input type="radio" id="q1-op1" name="answer5" value="answer1-op1">
-                        <label for="q1-op1"></label><br>
-                        <input type="radio" id="q1-op2" name="answer5" value="answer1-op2">
-                        <label for="q1-op2"></label><br>
-                        <input type="radio" id="q1-op3" name="answer5" value="answer1-op3">
-                        <label for="q1-op3"></label><br>
-                        <input type="radio" id="q1-op4" name="answer5" value="answer1-op4">
-                        <label for="q1-op4"></label><br>
-                    </div>
+                            <div class="question">
+                                <h2>What unconventional tool did Jackson Pollock often use to create his paintings?</h2>
+                            </div>
+                            <div class="answer">   
+                                <input type="radio" id="q5-op1" name="answer5" value="answer5-op1">
+                                <label for="q5-op1">
+                                    <p>Paintbrush</p>
+                                </label>
+                                <!-- correct answer -->
+                                <input type="radio" id="q5-op2" name="answer5" value="answer5-op2">
+                                <label for="q5-op2">
+                                    <p>Drip stick</p>
+                                </label>
+                                <input type="radio" id="q5-op3" name="answer5" value="answer5-op3">
+                                <label for="q5-op3">
+                                    <p>Palette knife</p>
+                                </label>
+                                <input type="radio" id="q5-op4" name="answer5" value="answer5-op4">
+                                <label for="q5-op4">
+                                    <p>Feather quill</p>
+                                </label>
+                            </div>
 
-                    <div>Question6?<br>
-                        <input type="radio" id="q1-op1" name="answer6" value="answer1-op1">
-                        <label for="q1-op1"></label><br>
-                        <input type="radio" id="q1-op2" name="answer6" value="answer1-op2">
-                        <label for="q1-op2"></label><br>
-                        <input type="radio" id="q1-op3" name="answer6" value="answer1-op3">
-                        <label for="q1-op3"></label><br>
-                        <input type="radio" id="q1-op4" name="answer6" value="answer1-op4">
-                        <label for="q1-op4"></label><br>
-                    </div>
-
-                    <div class="item1">
-                        <p><a href="#" onClick="scoreQuiz(); return false;"><p>Show my score: <input name="score" type="text" size="30" maxlength="40" readonly="yes">
-                        </a></p>
+                            <div class="question">
+                                <h2>What nickname is often associated with Jackson Pollock due to his energetic and physical painting style?</h2>
+                            </div>
+                            <div class="answer"> 
+                                <input type="radio" id="q6-op1" name="answer6" value="answer6-op1">
+                                <label for="q6-op1">
+                                    <p>Splashmaster</p>
+                                </label>
+                                <!-- correct answer -->
+                                <input type="radio" id="q6-op2" name="answer6" value="answer6-op2">
+                                <label for="q6-op2">
+                                    <p>Jack the dripper</p>
+                                </label>
+                                <input type="radio" id="q6-op3" name="answer6" value="answer6-op3">
+                                <label for="q6-op3">
+                                    <p>Art Dynamo</p>
+                                </label>
+                                <input type="radio" id="q6-op4" name="answer6" value="answer6-op4">
+                                <label for="q6-op4">
+                                    <p>Paint Maverick</p>
+                                </label>
+                            </div>
+                            <div class="lrg-text">
+                                <h2>You're Finished!</h2>
+                            </div>
+                            <div class="submit">
+                                <p><a href="quiz1score.html" onClick="scoreQuiz(); return false;">See Your Score!</a></p>
+                            </div>
+                        </div>
                     </div>
                 </form>    
             </section>
-            
+                
             <section class="footer">
-                <h4> About us</h4>
-                <p> Thanks for taking part</p>
-            
-                <i class="fa fa-facebook-official" aria-hidden="true"></i>
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-                <i class="fa fa-snapchat-square" aria-hidden="true"></i>
-                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <div class="footer-links">
+                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <i class="fa fa-snapchat-square" aria-hidden="true"></i>
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </div>
             </section>
         </div>
-        <script>
-            // Set the date we're counting down to
-            var countDownDate = new Date().getTime() + 10000; // 10 seconds for the first question
 
-            // Update the count down every 1 second
-            var x = setInterval(function() {
-                // Get today's date and time
-                var now = new Date().getTime();
-
-                // Find the distance between now and the count down date
-                var distance = countDownDate - now;
-
-                // Time calculations for seconds
-                var seconds = Math.floor(distance / 1000);
-
-                // Display the result in the element with id="demo"
-                document.getElementById("demo").innerHTML = "Time remaining: " + seconds + "s ";
-
-                // If the count down is finished, move to the next question or handle as needed
-                if (distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("demo").innerHTML = "Time's up!";
-                    // Add logic to move to the next question or perform any other action
-                }
-            }, 1000);
-        </script>
+   
     </body>
 </html>
