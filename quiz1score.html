@@ -4,12 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Score Page</title>
+    <style>
+        /* Add some styling for better presentation */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Quiz Score</h1>
+    <h1>Quiz Score and Answers</h1>
 
     <script>
-        // Function to get the value of a URL parameter by name
         function getParameterByName(name, url) {
             if (!url) url = window.location.href;
             name = name.replace(/[\[\]]/g, "\\$&");
@@ -20,11 +32,39 @@
             return decodeURIComponent(results[2].replace(/\+/g, " "));
         }
 
-        // Retrieve the score parameter from the URL
         var score = getParameterByName('score');
+        var answer1 = getParameterByName('answer1');
+        var answer2 = getParameterByName('answer2');
+        var answer3 = getParameterByName('answer3');
+        var answer4 = getParameterByName('answer4');
+        var answer5 = getParameterByName('answer5');
+        var answer6 = getParameterByName('answer6');
 
-        // Display the score on the page
         document.write("<p>" + score + "</p>");
+
+        // Function to display explanations for each question
+        function displayExplanations() {
+            displayExplanation("Question 1", answer1, "answer1-op3", "He was born in Wyoming, America.");
+            displayExplanation("Question 2", answer2, "answer2-op3", "He moved to New York at the age of 18.");
+            displayExplanation("Question 3", answer3, "answer3-op2", "He poured paint which reflected his feelings.");
+            displayExplanation("Question 4", answer4, "answer4-op3", "His style of painting is called Abstract Expressionism.");
+            displayExplanation("Question 5", answer5, "answer5-op2", "He often used a drip stick to create paintings.");
+            displayExplanation("Question 6", answer6, "answer6-op2", "He is often associated with the nickname 'Jack the dripper'.");
+        }
+
+        function displayExplanation(question, userAnswer, correctAnswer, explanation) {
+            var isCorrect = userAnswer === correctAnswer;
+            var message;
+            if (isCorrect) {
+                message = "Correct! " + explanation;
+            } else {
+                message = "Wrong! " + explanation;
+            }
+            document.write("<p>" + question + ": " + message + "</p>");
+        }
+
+        // Call the function to display explanations
+        displayExplanations();
     </script>
 </body>
 </html>
